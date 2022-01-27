@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200:400&display=swap');
+
+:root {
+    --bg-color: rgb(32, 29, 37);
+    --writeDuration: 3s;
+    --charaNumber: 9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    overflow-x: hidden;
+    color: orange;
+}
+
+
+/* Header */
+
+header {
+    height: 20vh;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1100px;
+    position: fixed;
+    width: 100vw;
+    color: var(--bg-color);
+    z-index: 100;
+}
+
+header div.title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15vh 20px;
+    margin-right: 10vw;
+    font-weight: 400;
+}
+
+header div.title img {
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+    mix-blend-mode: multiply;
+    border-radius: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: right;
+}
+
+header nav a {
+    margin-left: 5vw;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+header nav a:hover {
+    font-weight: 400;
+}
+
+
+/* Welcome wection */
+
+.welcome {
+    padding: 45vh 0 5vh 0;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome h1 {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    width: max-content;
+    height: max-content;
+    position: relative;
+}
+
+.welcome h1::before, .welcome h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.welcome h1::before {
+    background: var(--bg-color);
+    animation: spawn var(--writeDuration) steps(var(--charaNumber)) 2s forwards;
+}
+
+.welcome h1::after {
+    width: 3px;
+    background: orange;
+    opacity: 0;
+    border-radius: 2px;
+    animation: spawn var(--writeDuration) steps(var(--charaNumber)) 2s forwards,
+        erase 1s steps(var(--charaNumber)) infinite;
+}
+
+@keyframes spawn {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes erase {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Images section */
+
+#imgs {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.imgs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1vw;
+    height: auto;
+}
+
+.imgs-grid img {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 25vw;
+    transition: 0.3s;
+}
+
+.imgs-grid img.big {
+    grid-column: span 2;
+    width: 52vw;
+    grid-row: span 2;
+}
+
+
+/* Videos */
+
+#videos {
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+}
+
+#videos .videos-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#videos video {
+    height: 75vh;
+    padding: 2.5vh 0;
+}
