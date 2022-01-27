@@ -23,6 +23,15 @@ body {
     color: orange;
 }
 
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 /* Header */
 
@@ -174,4 +183,34 @@ header nav a:hover {
 #videos video {
     height: 75vh;
     padding: 2.5vh 0;
+}
+
+
+/* Infos */
+
+#infos {
+    display: flex;
+    justify-content: center;
+}
+
+.liens-utils {
+    padding: 2vh 0;
+    width: 85vw;
+}
+
+.liens-utils .link {
+    display: block;
+    padding: 2vh 0;
+}
+
+.liens-utils h2 {
+    padding: 3vh 0;
+}
+
+.liens-utils .link .in-link {
+    display: inline-block;
+}
+
+.liens-utils .link .logo {
+    transform: translateY(2px);
 }
