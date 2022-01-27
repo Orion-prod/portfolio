@@ -81,6 +81,77 @@ header nav a:hover {
     font-weight: 400;
 }
 
+.toggle {
+    display: none;
+    z-index: 101;
+}
+
+@media screen and (max-width: 420px) {
+    header {
+        display: none;
+        width: 200px;
+        height: 200vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header.active {
+        display: flex;
+    }
+
+    header div.title {
+        flex-direction: column;
+        width: max-content;
+        padding-bottom: 5vh;
+    }
+
+    header div.title img {
+        margin-bottom: 2vh;
+    }
+
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header nav a {
+        margin-top: 5vh;
+    }
+
+    .toggle {
+        display: block;
+        position: fixed;
+        top: 5vh;
+        width: 5vh;
+    }
+
+    .toggle ion-icon {
+        position: absolute;
+        font-size: 4em;
+        background: orange;
+        color: var(--bg-color);
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+    .open {
+        visibility: visible;
+    }
+
+    .close {
+        visibility: hidden;
+    }
+
+    .open.active {
+        visibility: hidden;
+    }
+
+    .close.active {
+        visibility: visible;
+    }
+    
+}
+
 
 /* Welcome wection */
 
