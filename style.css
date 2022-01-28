@@ -90,8 +90,8 @@ header nav a:hover {
     header {
         display: none;
         width: 400px;
-        height: 110vh;
-        transform: translate(-310px, -100px);
+        height: 100vh;
+        transform: translate(-320px, -100px);
     }
 
     header.active {
@@ -299,18 +299,25 @@ header nav a:hover {
 }
 
 .liens-utils .link {
-    display: block;
     padding: 2vh 0;
+    display: flex;
+    justify-content: center;
 }
 
 .liens-utils h2 {
     padding: 3vh 0;
+    display: flex;
+    justify-content: center;
 }
 
 .liens-utils .link .in-link {
     display: inline-block;
 }
 
+.liens-utils .link a.in-link {
+    padding-left: 5px;
+}
+
 .liens-utils .link .logo {
-    transform: translateY(2px);
+    padding-right: 7px;
 }
