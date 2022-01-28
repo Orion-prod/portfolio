@@ -122,6 +122,7 @@ header nav a:hover {
         display: block;
         position: fixed;
         top: 5vh;
+        left: 5vh;
         width: 5vh;
     }
 
@@ -206,6 +207,16 @@ header nav a:hover {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .welcome {
+        height: 40vh
+    }
+
+    .welcome h1 {
+        font-size: 3em;
+    }
+}
+
 
 /* Images section */
 
@@ -237,6 +248,20 @@ header nav a:hover {
     grid-row: span 2;
 }
 
+@media screen and (max-width: 420px) {
+    #imgs {
+        padding-top: 8vh;
+    }
+
+    .imgs-grid img {
+        width: 20vw;
+    }
+
+    .imgs-grid img.big {
+        width: 45vw;
+    }
+}
+
 
 /* Videos */
 
@@ -254,6 +279,13 @@ header nav a:hover {
 #videos video {
     height: 75vh;
     padding: 2.5vh 0;
+}
+
+@media screen and (max-width: 420px) {
+    #videos video {
+        height: auto;
+        width: 70vw;
+    }
 }
 
 
