@@ -337,7 +337,7 @@ header nav a:hover {
 }
 
 .liens-utils {
-    padding: 2vh 0;
+    padding: 5vh 0;
     width: 85vw;
 }
 
@@ -363,4 +363,47 @@ header nav a:hover {
 
 .liens-utils .link .logo {
     padding-right: 7px;
+}
+
+
+/* Contact */
+
+#contact {
+    padding: 5vh 0;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    padding: 3vh 10vw;
+}
+
+#contact form .mail-body {
+    border: 5px solid orange;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+    font-size: 1.5em;
+}
+
+#contact form .mail-submit {
+    width: 20vw;
+    margin: 0 30vw;
+    padding: 20px;
+    background: orange;
+    color: var(--bg-color);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 1.2em;
+    transition: 0.4s
+}
+
+#contact form .mail-submit:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

@@ -40,3 +40,10 @@ console.log(span)
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+
+const body = document.getElementsByClassName("mail-body").value;
+
+function sendMail() {
+    window.open('mailto:mathisubaud2005@gmail.com?body=' + body);
+}
