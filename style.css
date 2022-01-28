@@ -89,33 +89,38 @@ header nav a:hover {
 @media screen and (max-width: 420px) {
     header {
         display: none;
-        width: 200px;
-        height: 200vh;
-        justify-content: center;
-        flex-direction: column;
+        width: 400px;
+        height: 110vh;
+        transform: translate(-310px, -100px);
     }
 
     header.active {
         display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
-    header div.title {
+    header.active div.title {
         flex-direction: column;
         width: max-content;
-        padding-bottom: 5vh;
+        padding-bottom: 0vh;
     }
 
-    header div.title img {
+    header.active div.title img {
         margin-bottom: 2vh;
+        padding: 0;
     }
 
-    header nav {
+    header.active nav {
         flex-direction: column;
         justify-content: center;
+        transform: translateX(-40px);
     }
 
-    header nav a {
+    header.active nav a {
         margin-top: 5vh;
+        display: flex;
+        justify-content: center;
     }
 
     .toggle {
@@ -128,11 +133,11 @@ header nav a:hover {
 
     .toggle ion-icon {
         position: absolute;
-        font-size: 4em;
+        font-size: 3em;
         background: orange;
         color: var(--bg-color);
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .open {
@@ -252,14 +257,6 @@ header nav a:hover {
     #imgs {
         padding-top: 8vh;
     }
-
-    .imgs-grid img {
-        width: 20vw;
-    }
-
-    .imgs-grid img.big {
-        width: 45vw;
-    }
 }
 
 
@@ -284,7 +281,7 @@ header nav a:hover {
 @media screen and (max-width: 420px) {
     #videos video {
         height: auto;
-        width: 70vw;
+        width: 75vw;
     }
 }
 
