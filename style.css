@@ -46,6 +46,8 @@ header {
     width: 100vw;
     color: var(--bg-color);
     z-index: 100;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 header div.title {
@@ -407,4 +409,12 @@ header nav a:hover {
 #contact form .mail-submit:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+    #contact form .mail-submit {
+        font-size: 1em;
+        width: 40vw;
+        margin: 0 20vw;
+    }
 }

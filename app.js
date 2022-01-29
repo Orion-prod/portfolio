@@ -9,6 +9,22 @@ toggle.addEventListener("click", () => {
     header.classList.toggle("active")
 })
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 800) {
+        header.style.opacity = 0.5;
+    } else {
+        header.style.opacity = 1;
+    }
+})
+
+header.addEventListener("mouseover", () => {
+    header.style.opacity = 1;
+})
+
+header.addEventListener("mouseout", () => {
+    header.style.opacity = 0.5;
+})
+
 var buttons = document.getElementsByClassName('btn-nav');
 for (var i = 0, len = buttons.length; i < len; i++) {
     buttons[i].onclick = function (){
