@@ -24,7 +24,6 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementsByClassName("myImg");
 var modalImg = document.getElementById("img01");
-console.log(img);
 for (var i = 0, len = img.length; i < len; i++) {
     img[i].onclick = function (){
         modal.style.display = "block";
@@ -41,9 +40,8 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-
-const body = document.getElementsByClassName("mail-body").value;
+const body = document.getElementById("pmSubject");
 
 function sendMail() {
-    window.open('mailto:mathisubaud2005@gmail.com?body=' + body);
-}
+    window.open("mailto:mathisubaud2005@gmail.com?subject=Question portfolio&body=" + body.value);
+};

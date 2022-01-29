@@ -351,6 +351,7 @@ header nav a:hover {
     padding: 3vh 0;
     display: flex;
     justify-content: center;
+    font-weight: 400;
 }
 
 .liens-utils .link .in-link {
