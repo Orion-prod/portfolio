@@ -9,7 +9,13 @@ toggle.addEventListener("click", () => {
     header.classList.toggle("active")
 })
 
-window.addEventListener("scroll", () => {
+
+
+header.addEventListener("mouseover", () => {
+    header.style.opacity = 1;
+})
+
+header.addEventListener("mouseout", () => {
     if (window.scrollY > 800) {
         header.style.opacity = 0.5;
     } else {
@@ -17,12 +23,14 @@ window.addEventListener("scroll", () => {
     }
 })
 
-header.addEventListener("mouseover", () => {
-    header.style.opacity = 1;
-})
-
-header.addEventListener("mouseout", () => {
-    header.style.opacity = 0.5;
+window.addEventListener("scroll", () => {
+    if (window.matchMedia("(min-width: 420px)").matches) { // add media query
+        if (window.scrollY > 800) {
+            header.style.opacity = 0.5;
+        } else {
+            header.style.opacity = 1;
+        }
+    }
 })
 
 var buttons = document.getElementsByClassName('btn-nav');
