@@ -36,7 +36,7 @@ a:hover {
 /* Header */
 
 header {
-    height: 20vh;
+    height: 12vh;
     background: orange;
     display: flex;
     justify-content: center;
@@ -61,8 +61,8 @@ header div.title {
 
 header div.title img {
     margin-right: 20px;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     mix-blend-mode: multiply;
     border-radius: 10px;
 }
